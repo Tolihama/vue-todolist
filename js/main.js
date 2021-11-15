@@ -19,10 +19,13 @@ const app = new Vue({
     },
     methods: {
         addTodo() {
-            this.todos.unshift({
-                text: this.inputText,
-                completed: false,
-            });
+            if (this.inputText.trim().length > 0) {
+                this.todos.unshift({
+                    text: this.inputText,
+                    completed: false,
+                });
+                this.inputText = '';
+            }
         },
         removeTodo(todoIndex) {
             this.todos.splice(todoIndex, 1);

@@ -27,6 +27,7 @@
                 placeholder="Aggiungi todo"
                 class="input-text"
                 v-model="inputText"
+                v-on:keyup.enter="addTodo"
             >
 
             <button 
