@@ -5,3 +5,89 @@
     box-sizing: border-box;
     font-family: sans-serif;
 }
+
+/* UTILITIES */
+.container {
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.container > * {
+    margin-bottom: 30px;
+}
+
+.btn {
+    padding: 10px 20px;
+    font-weight: 700;
+}
+
+/* HEADER */
+header.app-header {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    margin: 30px 0;
+}
+
+img.logo {
+    max-width: 300px;
+}
+
+.app-header h1 {
+    flex-grow: 1;
+    padding-left: 30px;
+    text-align: right;
+}
+
+/* NEW TODO INPUT SECTION */
+.todo-input {
+    display: flex;
+}
+
+.input-text {
+    flex-grow: 1;
+    margin-right: 30px;
+    padding: 10px;
+}
+
+/* TO-DO LIST */
+li.todo {
+    display: flex;
+    align-items: center;
+    list-style-type: none;
+    border-bottom: 1px solid #ccc;
+    padding: 15px;
+}
+
+li.todo .todo-text {
+    flex-grow: 1;
+    padding-right: 15px;
+}
+
+li.todo .todo-text::before {
+    content: '\f0c8';
+    font-family: 'Font Awesome 5 Free';
+    margin-right: 15px;
+}
+
+li.todo.completed .todo-text {
+    color: #aaa;
+    text-decoration: line-through;
+}
+
+li.todo.completed .todo-text::before {
+    content: '\f14a';
+    font-family: 'Font Awesome 5 Free';
+    color: green;
+    text-decoration: none;
+    margin-right: 15px;
+}
+
+li.todo:last-child {
+    border: none;
+}
+
+.delete {
+    color: red;
+
+}

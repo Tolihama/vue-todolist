@@ -4,15 +4,47 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Vue ToDo List</title>
+    <!-- Font Awesome 5.15.4 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <!-- Styles -->
     <link rel="stylesheet" href="./css/main.css">
     <!-- Vue -->
     <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
 </head>
 <body>
-    <div id="app">
-        
+    <div id="app" class="container">
+        <!-- HEADER -->
+        <header class="app-header">
+            <img src="https://www.boolean.careers/images/misc/logo.png" alt="Boolean Logo" class="logo">
+            <h1>Vue ToDo List</h1>
+        </header>
+
+        <!-- NEW TODO INPUT SECTION -->
+        <section class="todo-input">
+            <input 
+                type="text"
+                placeholder="Aggiungi todo"
+                class="input-text"
+            >
+
+            <button class="btn">Aggiungi</button>
+        </section>
+
+        <!-- TO-DO LIST -->
+        <main class="todos">
+            <ul>
+                <li 
+                    class="todo"
+                    v-for="todo in todos"
+                    :class="{ completed: todo.completed }"
+                >
+                    <span class="todo-text">{{ todo.text }}</span>
+                    <i class="fas fa-times delete"></i>
+                </li>
+            </ul>
+        </main>
+
     </div>
     
     <!-- JS -->
