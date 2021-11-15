@@ -51,6 +51,10 @@ img.logo {
 }
 
 /* TO-DO LIST */
+.todos h2 {
+    text-align: center;
+}
+
 li.todo {
     display: flex;
     align-items: center;
@@ -89,5 +93,5 @@ li.todo:last-child {
 
 .delete {
     color: red;
-
+    cursor: pointer;
 }

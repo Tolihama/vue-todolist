@@ -16,4 +16,9 @@ const app = new Vue({
             },
         ],
     },
+    methods: {
+        removeTodo(todoIndex) {
+            this.todos.splice(todoIndex, 1);
+        },
+    },
 });

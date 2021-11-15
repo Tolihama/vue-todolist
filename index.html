@@ -36,13 +36,18 @@
             <ul>
                 <li 
                     class="todo"
-                    v-for="todo in todos"
+                    v-for="(todo, index) in todos"
                     :class="{ completed: todo.completed }"
                 >
                     <span class="todo-text">{{ todo.text }}</span>
-                    <i class="fas fa-times delete"></i>
+                    <i 
+                        class="fas fa-times delete"
+                        @click="removeTodo(index)"
+                    >
+                    </i>
                 </li>
             </ul>
+            <h2 v-if="todos.length === 0">Non ci sono elementi nella lista</h2>
         </main>
 
     </div>
