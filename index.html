@@ -26,9 +26,15 @@
                 type="text"
                 placeholder="Aggiungi todo"
                 class="input-text"
+                v-model="inputText"
             >
 
-            <button class="btn">Aggiungi</button>
+            <button 
+                class="btn"
+                @click="addTodo"
+            >
+            Aggiungi
+            </button>
         </section>
 
         <!-- TO-DO LIST -->
