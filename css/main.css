@@ -66,6 +66,7 @@ li.todo {
 li.todo .todo-text {
     flex-grow: 1;
     padding-right: 15px;
+    cursor: pointer;
 }
 
 li.todo .todo-text::before {

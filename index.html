@@ -46,7 +46,12 @@
                     v-for="(todo, index) in todos"
                     :class="{ completed: todo.completed }"
                 >
-                    <span class="todo-text">{{ todo.text }}</span>
+                    <span 
+                        class="todo-text"
+                        @click="toggleCompleted(index)"
+                    >
+                        {{ todo.text }}
+                    </span>
                     <i 
                         class="fas fa-times delete"
                         @click="removeTodo(index)"

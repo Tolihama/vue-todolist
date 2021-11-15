@@ -30,5 +30,8 @@ const app = new Vue({
         removeTodo(todoIndex) {
             this.todos.splice(todoIndex, 1);
         },
+        toggleCompleted(todoIndex) {
+            this.todos[todoIndex].completed = !this.todos[todoIndex].completed;
+        },
     },
 });
